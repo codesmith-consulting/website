@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=640" />
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:200,400,400i" rel="stylesheet">
+  <link href='/assets/style.css' rel='stylesheet' type='text/css' />
+  <title>Codesmith Consulting | {{ page.title }}</title>
+</head>
+<body>
+<div class="page {{ page.class }}">
+  <nav class="nav">
+    <a class="nav__brand" href="/">Mike <strong>Jackson</strong></a>
+    <ul class="nav__menu menu">
+      {% if page.title == 'Blog' %}
+        <li><span class="menu__item menu__item_selected">Blog</span>
+      {% else %}
+        <li><a class="menu__item" href="/">Blog</a>
+      {% endif %}
+
+    
+      {% if page.title == 'About' %}
+        <li><span class="menu__item menu__item_selected">About</span>
+      {% else %}
+        <li><a class="menu__item" href="/about">About</a>
+      {% endif %}
+    </ul>
+  </nav>
+
+{{ content }}
